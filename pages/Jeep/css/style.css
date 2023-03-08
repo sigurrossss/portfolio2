@@ -1,0 +1,607 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: inherit; text-decoration: none;}
+
+body{
+    background-color: #242528;
+    color: #fff;
+    font-family: 'NanumSquare';
+}
+
+header{}
+.hWrap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #242528;
+}
+
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+h1 img{
+    width: 120px;
+}
+
+.gnb{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.gnb li{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.gnb li:hover{
+    color: #aaa;
+}
+
+
+.bn{
+    margin-top: 20px;
+    position: relative;
+}
+.bnImg1{
+    height: calc(100vh - 158px);
+    background-image: url(../images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bnImg2{
+    height: calc(100vh - 158px);
+    background-image: url(../images/banner2-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bnImg3{
+    height: calc(100vh - 158px);
+    background-image: url(../images/banner3-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bnImg4{
+    height: calc(100vh - 158px);
+    background-image: url(../images/banner4-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bnImg5{
+    height: calc(100vh - 158px);
+    overflow: hidden;
+}
+.bnImg5 video{
+    min-width: 1600px;
+    position:relative;
+    bottom: 133px;
+}
+
+.bnImg a{
+    display: block;
+    height: 100%;
+}
+.bn .prev, .next{
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 380px;
+    cursor: pointer;
+}
+.prev{
+    left: 100px;
+}
+.next{
+    right: 100px;
+}
+.bn button img{
+    width: 25px;
+}
+
+.bn .slick-dots button{
+    width: 40px;
+    height: 3px;
+    border: 0;
+    text-indent: -9999px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.bn .slick-dots .slick-active button{
+    background-color: #aaa;
+}
+.bn .slick-dots{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    cursor: pointer;
+}
+.bn .slick-dots li{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.mainIcon{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.mainIcon div{
+    position: relative;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.mainIcon div:after{
+    content: '';
+    width: 1px;
+    height: 95px;
+    background-image: url(../images/mainIconBar.png);
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: -60px;
+}
+.mainIcon div:last-child::after{
+    background-image: none;
+}
+    
+.mainIcon div a{}
+.mainIcon div h4{
+    margin-top: 20px;
+}
+
+.mainMenu{
+    margin-top: 150px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.model a{
+    display: block;
+    height: 360px;
+    border: 1px solid #696767;
+    text-align: center;
+    box-sizing: border-box;
+    width: 387px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.model a img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.model a:hover{
+    background-color: #1a1b1e;
+    border: 1px solid #46484c;
+}
+.model img{
+    margin-top: 37px;
+}
+.slick-slide img{
+    display: inherit;
+}
+.model .name{
+    margin-top: 38px;
+    text-align: center;
+    font-size: 19px;
+}
+.view{
+    width: 220px;
+    height: 55px;
+    border: 1px solid #aaa;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.view p{
+    font-size: 19px;
+    color: #aaa;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.view span{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #4a4a4a;
+    filter: blur(10px);
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+  }
+
+  .view:hover{
+    color: #1a1b1e;
+  }
+  .view:hover span{
+    width: 225%;
+    height: 562.5px;
+  }
+  .view:active{
+    background-color: #fff;
+  }
+
+.gladiator{
+    padding-top: 28px;
+}
+
+.mainMenu button{
+    background-color: transparent;
+    border: 0;
+    text-indent: -9999px;
+}
+
+
+.btn{
+    position: relative;
+}
+.btn .mPrev, .mNext{
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: -180px;
+    cursor: pointer;
+}
+.btn .mPrev{
+    left: 280px;
+}
+.btn .mNext{
+    right: 280px;
+}
+
+
+.trailR{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+}
+.trailR h4{
+    font-size: 44px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.slide{
+    padding-top: 180px;
+    display: flex;
+    position: relative;
+    width: 1200px;
+    margin:0 auto;
+    justify-content: space-between;
+    margin-top: 40px;
+    
+}
+
+.slide .txtSlide{
+    width: 650px;
+    text-align: right;
+}
+
+.slide .slideT{
+    height: 319px;
+    margin-top: 70px;
+    
+}
+.slideT .name{
+    font-size: 44px;
+    text-align: right;
+    font-weight: 100;
+    margin-top: 120px;
+}
+.slideT .txt{
+    margin-top: 30px;
+}
+
+
+.slide .imgSlide{
+    width: 510px;
+    margin-top: 70px;
+}
+
+.slide .slick-dots{
+    position: absolute;
+    top: -150px;
+    left: 0;
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+    background-image: url(../images/line.png);
+    content: '';
+    width: 1200px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 50px;
+}
+
+.slide .slick-dots li{
+    width: 145px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.slide .slick-dots li button{
+    width: 100%;
+    height: 75px; 
+    text-indent: -9999px;
+    background-position: center;
+    background-color: unset;
+    border:0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+.slide .slick-dots li:nth-child(1) button{
+    background-image: url(../images/trailRated_1.png);
+    background-repeat: no-repeat;
+}
+.slide .slick-dots li:nth-child(1) button:hover,
+.slide .slick-dots li:nth-child(1).slick-active button{
+    background-image: url(../images/trailRatedAc_1.png);
+    background-repeat: no-repeat;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.slide .slick-dots li:nth-child(2) button{
+    background-image: url(../images/trailRated_2.png);
+    background-repeat: no-repeat;
+}
+.slide .slick-dots li:nth-child(2) button:hover,
+.slide .slick-dots li:nth-child(2).slick-active button{
+    background-image: url(../images/trailRatedAc_2.png);
+    background-repeat: no-repeat;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.slide .slick-dots li:nth-child(3) button{
+    background-image: url(../images/trailRated_3.png);
+    background-repeat: no-repeat;
+}
+.slide .slick-dots li:nth-child(3) button:hover,
+.slide .slick-dots li:nth-child(3).slick-active button{
+    background-image: url(../images/trailRatedAc_3.png);
+    background-repeat: no-repeat;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.slide .slick-dots li:nth-child(4) button{
+    background-image: url(../images/trailRated_4.png);
+    background-repeat: no-repeat;
+}
+.slide .slick-dots li:nth-child(4) button:hover,
+.slide .slick-dots li:nth-child(4).slick-active button{
+    background-image: url(../images/trailRatedAc_4.png);
+    background-repeat: no-repeat;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.slide .slick-dots li:nth-child(5) button{
+    background-image: url(../images/trailRated_5.png);
+    background-repeat: no-repeat;
+}
+.slide .slick-dots li:nth-child(5) button:hover,
+.slide .slick-dots li:nth-child(5).slick-active button{
+    background-image: url(../images/trailRatedAc_5.png);
+    background-repeat: no-repeat;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.slide .slick-dots li:after{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.slide .slick-dots li:nth-child(1):after{
+    content: 'Traction';
+}
+.slide .slick-dots li:nth-child(2):after{
+    content: 'Water Fording';
+}
+.slide .slick-dots li:nth-child(3):after{
+    content: 'Maneuverability';
+}
+.slide .slick-dots li:nth-child(4):after{
+    content: 'Articulation';
+}
+.slide .slick-dots li:nth-child(5):after{
+    content: 'Ground Clearance';
+}
+
+
+.pressR{
+    display: flex;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    justify-content: space-between;
+}
+
+
+.preview{
+    margin-top: 10px;
+}
+.preview img{}
+.preview p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.news{
+    
+}
+.news h4{
+    font-size: 36px;
+    text-align: right;
+    font-weight: lighter;
+    margin-bottom: 75px;
+}
+.news a{
+    font-size: 15px;
+    display: flex;
+    border-bottom: 1px solid #414141;
+    justify-content: space-between;
+}
+.news a:last-child{
+    border-bottom: none;
+}
+.news .newsTxt{
+    margin-right: 130px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.news .newsTxt:hover{
+    border-bottom: 1px solid #aaa;
+}
+.news .date{
+    text-align: right;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+
+
+
+.snsBox{
+    margin-top: 180px;
+    height: 95px;
+    background-color: #232b21;
+}
+.snsCon{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.follow{
+    color: #aaa;
+    margin-top: 40px;
+}
+.snsIcon{
+    margin-top: 32px;
+    margin-left: 15px;
+}
+.snsBox button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.tBox{
+    display: flex;
+    margin-left: inherit;
+}
+.top{
+    color: #aaa;
+    margin-top: 40px;
+}
+.tIcon{
+    margin-top: 30px;
+}
+
+footer{
+    height: 680px;
+    background-color: #1a1b1e;
+}
+.fWrap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #aaa;
+    position: relative;
+}
+.fmenu{
+    padding-top: 100px;
+    font-size: 14px;
+    display: flex;
+}
+.fmenu li{
+    margin-right: 80px;
+}
+.contact{
+    margin-top: 60px;
+}
+.contact p{
+    font-size: 14px;
+}
+.fWrap address{
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 14px;
+}
+
+form{
+    position: absolute;
+    top: 180px;
+    right: 0;
+}
+form input[type=text]{
+    background-image: url(../images/searchIcon.png);
+    background-repeat: no-repeat;
+    width: 230px;
+    height: 23px;
+    background-color: transparent;
+    border:0;
+    border-bottom: 1px solid #aaa;
+    padding-left: 30px;
+    color: #aaa;
+}
+form button{
+    background-color: transparent;
+    border:0;
+    color: #aaa;
+}
+
+.fBox{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    border-top: 1px solid #414141;
+}
+.fLogo{
+    text-align: center;
+    margin-top: 60px;
+}
+.copyright{
+    font-size: 12px;
+    color: #5f5f5f;
+    text-align: center;
+    margin-top: 20px;
+}

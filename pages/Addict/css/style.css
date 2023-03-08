@@ -1,0 +1,928 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: inherit; text-decoration: none;}
+
+body{
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    background-color: #ddd;
+    padding-bottom: 10px;
+}
+header h1{
+    margin-left: 20px;
+}
+
+.menuBtn{
+    margin-right: 20px;
+    background-color: inherit;
+    border: none;
+    z-index: 1010;
+    cursor: pointer;
+}
+.menuBtn span{
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #6d6e71;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    transition: all 1s;
+}
+.menuBtn span:first-child{
+    margin-top: -7px;
+}
+.menuBtn span:last-child{
+    margin-top: 7px;
+}
+.menuBtn.on span{
+    margin: 0;
+}
+.menuBtn.on span:nth-child(1){
+    transform: rotate(45deg) translate(1px,2px);
+    
+}
+.menuBtn.on span:nth-child(2){
+    opacity: 0;
+}
+.menuBtn.on span:nth-child(3){
+    transform: rotate(-45deg) translate(-1px,-2px);
+}
+
+.overlayMenu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #ddd;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    top: 0;
+}
+.overlayMenu.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menuImg{
+    width: 860px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.menuImg div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: none;
+    transition: transform 3s;
+}
+.menuImg div:nth-child(1){
+    display: block;
+}
+.menuImg a{
+    display: block;
+    height: 100%;
+}
+.menuImg .menuImg1{
+    background-image: url(../images/productImg.jpg);
+}
+.menuImg2{
+    background-image: url(../images/storyImg.jpg);
+
+}
+.menuImg3{
+    background-image: url(../images/scentImg.jpg);
+}
+.menuImg4{
+background-image: url(../images/custmomerImg.jpg);
+}
+
+
+.menuRight{
+    width: 1060px;
+    font-family: 'Playfair Display';
+    color: #43484d;
+    padding-top: 50px;
+}
+.menuRight h2{
+    text-align: center;
+}
+.menuRight .menu{
+    margin-top: 70px;
+    font-size: 80px;
+    margin-left: 100px;
+}
+.menuRight .menu li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.menuRight .menu li:hover{
+    text-decoration-line: underline;
+}
+
+.menuRight .menuS{
+    margin-top: 80px;
+    font-size: 24px;
+    margin-left: 100px;
+}
+.menuRight .menuS li{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.menuRight .menuS li:hover{
+    color: #fff;
+}
+
+.main{
+    height: 1500px;
+    background-color: #ddd;
+    position: relative;
+}
+.mainTxt{
+    font-size: 88px;
+    font-family: 'Playfair Display';
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 200px;
+    z-index: 90;
+    
+    
+}
+.mainTxt.stop{
+  position: absolute;
+  top: 2140px;
+  z-index: 5;
+  color: #fff;
+}
+
+.main2{
+    background-color: #ddd;
+    height: 700px;
+    font-family: 'Nanum Gothic';
+}
+.main2Txt{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.main3{
+    background-color: #ddd;
+    height: 1500px;
+}
+.mainBox{
+    padding-top: 300px;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    
+}
+.marquee{
+    display: flex;
+    
+}
+
+.no-wrap {
+    white-space: nowrap!important;
+  }
+  
+  .container{
+    max-width:100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 170px;
+    margin-top: -170px;
+    padding-bottom: 100px;
+  }
+  
+  /* quickest, dirtiest grid possible */
+  .grid {
+    display: block;
+    font-size: 0; /* if anybody knows a browser in which this doesn't work, would love to hear from you in the comments */
+  }
+  
+  .cell {
+    display: inline-block;
+    font-size: 2rem; /* fix that elegant/ugly font-size: 0 hack */
+    font-weight: 700;
+    position: relative;
+    padding: 1rem .5rem;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .cell.mq1{
+    transform: translate(0,-550px);
+  }
+  .cell.mq2{
+    /* transform : translate(x값, y값) */
+    transform: translate(-120px,-230px);
+  }
+  .cell.mq3{
+    transform: translate(-70px,-430px);
+  }
+  .cell.mq4{
+    transform: translate(-30px,-550px);
+  }
+  .cell.mq5{
+    transform: translate(15px, -400px);
+  }
+  .cell.mq6{
+    transform: translate(60px, -450px);
+  }
+  .cell img{
+    display: block;
+  }
+  .cell .content {
+    display: block;
+    /* position: absolute;
+    top: .5rem;
+    bottom: .5rem;
+    left: .5rem;
+    right: .5rem;
+    padding: 1rem; */
+    color: #555;
+    background: #fff;
+    box-shadow: 0 2px 10px -10px #ccc;
+  }
+  
+  .fragrance{
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    
+  }
+  .fragrance h3{
+    font-family: 'Playfair Display';
+    font-size: 88px;
+    text-align: right;
+    transform: translate(0, -70px);
+    position: relative;
+    z-index: 3;
+  }
+  .fragrance .txt{
+    font-size: 14px;
+    text-align: right;
+    transform: translate(0, -70px);
+    font-family: 'Nanum Gothic';
+    position: relative;
+    z-index: 3;
+  }
+
+  .paper{
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/paper.png);
+    width: 723px;
+    height: 680px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    transform: translate(50px, -230px);
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+  }
+
+  .paper p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    transform: translate(0, -70px);
+    position: relative;
+    z-index: 3;
+    letter-spacing: 30px;
+  }
+
+  .number{
+    font-size: 130px;
+    width: 392px;
+
+  }
+  .top{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .topH{
+    font-size: 40px;
+    position: absolute;
+    top: 240px;
+    left: 527px;
+    font-family: 'Playfair Display';
+    color: #6c6c6c;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+  }
+  
+  .top:hover+.topH{
+    opacity: 1;
+  }
+  
+  .top:after{
+    content:"";
+    display:block;
+    position: absolute;
+    top: 42%;
+    width:0px;
+    height: 2px;
+    background-color:#6c6c6c;
+    opacity: .6;
+    z-index:-1;
+    transition: all .3s ease-in-out;
+  }
+  .top:hover:after{
+    width:50%;
+    
+  }
+
+
+  .middle{
+    display: flex;
+    cursor: pointer;
+  }
+  .midH{
+    font-size: 40px;
+    position: absolute;
+    top: 390px;
+    left: 532px;
+    font-family: 'Playfair Display';
+    color: #6c6c6c;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+  }
+  .middle:hover+.midH{
+    opacity: 1;
+  }
+  .middle:after{
+    content:"";
+    display:block;
+    position: absolute;
+    top: 64%;
+    width:0px;
+    height: 2px;
+    background-color:#6c6c6c;
+    opacity: .6;
+    z-index:-1;
+    transition: all .3s ease-in-out;
+  }
+  .middle:hover:after{
+    width:50%;
+  }
+
+  .base{
+    display: flex;
+    cursor: pointer;
+  }
+  .baseH{
+    font-size: 40px;
+    position: absolute;
+    top: 540px;
+    left: 533px;
+    font-family: 'Playfair Display';
+    color: #6c6c6c;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+  }
+  .base:hover+.baseH{
+    opacity: 1;
+  }
+  .base:after{
+    content:"";
+    display:block;
+    position: absolute;
+    top: 86%;
+    width:0px;
+    height: 2px;
+    background-color:#6c6c6c;
+    opacity: .6;
+    z-index:-1;
+    transition: all .3s ease-in-out;
+  }
+  .base:hover:after{
+    width:50%;
+  }
+
+
+  .note{
+    position: relative;
+  }
+
+  .note:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid #6c6c6c;
+    white-space: nowrap;
+    opacity: 0;
+  }
+
+  .note:hover:after{
+    opacity: 1;
+  }
+  .noteH{
+    font-size: 36px;
+    position: absolute;
+    top: 115px;
+    right: 600px;
+    font-family: 'Playfair Display';
+    color: #6c6c6c;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all ease 0.5s;
+  }
+  .note:hover+.noteH{
+    opacity: 1;
+  }
+
+
+  .frag{
+    position: relative;
+  }
+  .frag:after{
+    content: '';
+    position: absolute;
+    top: -13px;
+    left: -8px;
+    width: 173px;
+    height: 173px;
+    border-radius: 50%;
+    border: 1px solid #6c6c6c;
+    white-space: nowrap;
+    opacity: 0;
+  }
+
+  /* .frag:after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: -10px;
+    width: 0;
+    height: 85px;
+    background-color:#cdcdcd;
+    opacity: .6;
+    z-index:-1;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+  }
+  .frag:hover:after{
+    width: 190px;
+  } */
+  .frag:hover:after{
+    opacity: 1;
+  }
+  .fragH{
+    font-size: 36px;
+    position: absolute;
+    top: 610px;
+    right: 0;
+    font-family: 'Playfair Display';
+    color: #6c6c6c;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all ease 0.5s;
+  }
+  .frag:hover+.fragH{
+    opacity: 1;
+  }
+
+
+  .scentBtn{
+    font-family: 'Playfair Display';
+    width: 200px;
+    height: 55px;
+    border: 1px solid #9c9c9c;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transform: translate(0, -100px);
+}
+  .scentBtn p{
+    font-size: 24px;
+    color: #9c9c9c;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+  .scentBtn span{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #9c9c9c;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+  .scentBtn:hover p{
+    color: #fff;
+}
+  .scentBtn:hover span{
+    width: 225%;
+    height: 562.5px;
+}
+  .scent:active{
+    background-color: #fff;
+}
+
+
+  .best{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Playfair Display';
+    margin-top: 200px;
+    margin-bottom: 300px;
+    position: relative;
+  }
+  .best h3{
+    font-size: 72px;
+    text-align: center;
+  }
+
+  .itemCon{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .itemCon .itemBox{
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .itemCon .itemBox:hover{
+    background-color: #ddd;
+  }
+  .itemBox img{
+    margin-top: 30px;
+  }
+  .itemBox h4{
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  .itemBox .txt{
+    font-size: 12px;
+    margin-top: 5px;
+    color: #797979;
+  }
+  .itemBox .price{
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .productBtn{
+    width: 200px;
+    height: 55px;
+    border: 1px solid #9c9c9c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.productBtn p{
+    font-size: 24px;
+    color: #9c9c9c;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+.productBtn span{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #9c9c9c;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  .productBtn:hover p{
+    color: #fff;
+  }
+  .productBtn:hover span{
+    width: 225%;
+    height: 562.5px;
+
+  }
+  .productBtn:active{
+    background-color: #fff;
+  }
+
+  .vidCon{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 1186px;
+    
+  }
+  .vidCon h3{
+    font-family: 'Playfair Display';
+    font-size: 48px;
+    text-align: right;
+    margin-right: 238px;
+  }
+  .vidCon .video{
+    width: 720px;
+    height: 864px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -360px;
+  }
+  .vid{
+  }
+  .vid video{
+
+  }
+  .vidImg1{
+    position: absolute;
+    top: 900px;
+    right: 130px;
+  }
+  .vidImg1 img{
+    width: 400px;
+  }
+  .vidImg2{
+    position: absolute;
+    top: 530px;
+    left: 50px;
+  }
+  .vidImg2 img{
+    width: 300px;
+  }
+  .vidImg3{
+    position: absolute;
+    top: 230px;
+    right: 60px;
+  }
+  .vidImg3 img{
+    width: 250px;
+  }
+
+  .scrollCon{
+    position: relative;
+    height: 4700px;
+    margin-top: 400px;
+  }
+  .scroll{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+  }
+
+  .scroll>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(4.8);
+  }
+
+  .scroll div .inner{
+    position: relative;
+
+    background-size: cover;
+  }
+
+
+  .elem01{
+    z-index: 90;
+  }
+
+  .elem01 .inner{
+    width: 400px;
+    height: 272px;
+    background-image: url(../images/scrImg1-3.jpg);
+  }
+
+  .elem02 .inner{
+    width: 200px;
+    height: 245px;
+    background-image: url(../images/scrImg1.jpg);
+    bottom: 275px;
+    left: 100px;
+  }
+
+  .elem03 .inner{
+    width: 185px;
+    height: 185px;
+    background-image: url(../images/scrImg3.jpg);
+    bottom: 245px;
+    right: 108px;
+  }
+
+  .elem04 .inner{
+    width: 142px;
+    height: 187px;
+    background-image: url(../images/scrImg4.jpg);
+    bottom: 175px;
+    left: 287px;
+  }
+
+  .elem05 .inner{
+    width: 200px;
+    height: 253px;
+    background-image: url(../images/scrImg5.jpg);
+    bottom: 95px;
+    right: 315px;
+  }
+
+  .elem06 .inner{
+    width: 290px;
+    height: 207px;
+    background-image: url(../images/scrImg6.jpg);
+    top: 33px;
+    left: 361px;
+  }
+
+  .elem07 .inner{
+    width: 103px;
+    height: 103px;
+    background-image: url(../images/scrImg7.jpg);
+    top: 100px;
+    right: 267px;
+  }
+
+  .elem08 .inner{
+    width: 295px;
+    height: 213px;
+    background-image: url(../images/scrImg8.jpg);
+    top: 273px;
+    right: 363px;
+  }
+
+  .elem09 .inner{
+    width: 198px;
+    height: 198px;
+    background-image: url(../images/scrImg9.jpg);
+    top: 252px;
+    right: 100px;
+  }
+
+  .elem10 .inner{
+    width: 240px;
+    height: 294px;
+    background-image: url(../images/scrImg10.jpg);    
+    top: 300px;
+    left: 136px;
+  }
+  
+  .elem11 .inner{
+    width: 147px;
+    height: 147px;
+    background-image: url(../images/scrImg11.jpg);
+    top: 442px;
+    right: 75px;
+  }
+
+
+  .storeCon{
+    margin-top: 300px;
+    background-image: url(../images/stores3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 653px;
+  }
+  .store{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .storeCon h3{
+    font-size: 88px;
+    font-family: 'Playfair Display';
+    transform: translate(0, -65px);
+    margin-left: 250px;
+  }
+  .store div{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .store h4{
+    font-size: 24px;
+    font-family: 'Playfair Display';
+    margin-bottom: 45px;
+    font-weight: bold;
+  }
+  .shop{
+    font-size: 16px;
+    font-family: 'Nanum Gothic';
+
+  }
+  .ad{
+    font-size: 14px;
+    font-family: 'Nanum Gothic';
+    margin-bottom: 30px;
+  }
+
+  footer{
+    background-color: #484848;
+    height: 750px;
+    font-family: 'Nanum Gothic';
+
+  }
+  .fWrap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fMenu{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 50px;
+  }
+  .fMenu li{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .snsIcon{
+    text-align: center;
+    margin-top: 50px;
+  }
+  .snsIcon button{
+    background-color: transparent;
+    border: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+  }
+  .fb{}
+  .ins{}
+  .yt{}
+  .mail{
+    margin-top: 90px;
+    color: #a8a8a8;
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 14px;
+  }
+
+  .fCon{
+    color: #a8a8a8;
+    border-top: 1px solid #a8a8a8;
+    text-align: center;
+  }
+  address{
+    font-style: normal;
+    margin-top: 80px;
+    font-size: 14px;
+  }
+  .copyright{
+    font-size: 14px;
+    margin-top: 65px;
+  }
+  .fLogo{
+    margin-top: 60px;
+  }

@@ -1,0 +1,738 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0}
+ul{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+body{
+    font-family: 'Pretendard-Regular';
+}
+
+header{
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    
+}
+h1{
+    text-align: center;
+    padding-top: 7px;
+
+}
+h1 img{
+    height: 36px;
+}
+
+.util{
+    display: none;
+}
+.navBtn{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    border-left: 1px solid #ddd;
+}
+
+.navBtn span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #03b2a8;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+
+}
+.navBtn span:last-child{
+    margin-bottom: 0;
+}
+
+
+.searchBtn{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    border-right: 1px solid #ddd;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.searchBtn.active{
+    background-color: #03b2a8;
+}
+
+.searchBtn.active span{
+    border-color:#fff;
+}
+.searchBtn.active .bar{
+    background-color: #fff;
+}
+
+.searchBtn .circle{
+    border: 2px solid #03b2a8;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 13px;
+}
+.searchBtn .bar{
+    display: block;
+    width: 2px;
+    height: 10px;
+    background-color: #03b2a8;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 28px;
+    right: 14px;
+}
+
+
+
+
+
+form{
+    background-color: #fff;
+    border-bottom:1px solid #fff;
+    /* 상단 둘 나중에 화이트로 변경하기 */
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    display: none;
+    z-index: 30;
+    top: 50px;
+    left: 0;
+}
+form div{
+    position: relative;
+}
+form input{
+    padding-right: 40px;
+    line-height: 28px;
+    padding-left: 10px;
+    border: 0;
+    border-bottom:1px solid #03b2a8;
+}
+
+form button{
+    position: absolute;
+    right:5px;
+    top:7px;
+    border:0;
+    background-color:transparent;
+    color:#ccc
+}
+
+.btnSrc2{
+    color: #03b2a8;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.moUtil{
+    padding-top: 50px;
+}
+.moUtil ul{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+.moUtil ul li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.close{
+    background-color: #fff;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 48px;
+}
+.close span{
+    display: block;
+    position: absolute;
+    z-index: 3;
+}
+.close .top{
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border-bottom: 2px solid #03b2a8;
+    border-left: 2px solid #03b2a8;
+    top: 20px;
+    left: 10px;
+}
+.close .middle{
+    width: 25px;
+    height: 2px;
+    background-color: #03b2a8;
+    top: 28px;
+    left: 9px;
+}
+
+.navMain{
+    text-align: center;
+    padding-top: 50px;
+    
+
+}
+.navMain>li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+
+
+
+
+.navMain>li>a:after{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #03b2a8;
+    border-bottom: 2px solid #03b2a8;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    
+}
+
+
+.navMain .sub{
+    /* 다 끝낸 후 display: none 처리 */
+    display: none;
+    margin-top: 20px;
+}
+.navMain .sub li{
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    color: #333333;
+}
+.navMain .sub li:last-child{
+    border-bottom: 1px solid #ddd;
+}
+
+
+.bnCon{
+    position: relative;
+}
+.bnImgPc{
+    display: none;
+}
+.bnCon .mo{
+    display:block;
+    width: 100%;
+}
+
+.bnBoxC{
+    width: 230px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left:50%;
+
+    top:50%;
+   transform: translate(-50%,-50%);
+}
+
+
+.bnBox{
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.bnBox1{
+    border-bottom: 1px solid #999;
+}
+.bnBox1 img{
+    margin-top: 7px;
+    width: 35px;
+}
+.bnBox1 h2{
+    font-size: 25px;
+    font-weight: lighter;
+}
+.bnBox1 .timetxt{
+    font-size: 12px;
+    color: #2b2b2b;
+    margin-bottom: 7px;
+}
+
+.bnBox2{
+    border-bottom: 1px solid #999;
+}
+.bnBox2 h3{
+    margin-top: 7px;
+    font-size: 13px;
+    color: #03b2a8;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+.bnBox2 .bntxt{
+    font-size: 13px;
+}
+.bnBox2 .bntxt2{
+    font-size: 11px;
+    color: #646464;
+    margin-bottom: 7px;
+}
+
+.bnBox3{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bnBox3 div{
+    margin-top: 8px;
+    width: 75px;
+    height: 50px;
+    background-color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+
+}
+.bnBox3 div a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.bnBox3 div img{
+    width: 23px;
+
+}
+.bnBox3 div h4{
+    font-size: 11px;
+    font-weight: lighter;
+    margin-top: 3px;
+}
+
+
+.icon{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.iconCon a{
+    width: 33.33%;
+    box-sizing: border-box;
+    text-align: center;
+    
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.iconCon a:nth-child(3){
+    border-right: 0;
+}
+.iconCon a:nth-child(4){
+    border-bottom: 0;
+}
+.iconCon a:nth-child(5){
+    border-bottom: 0;
+}
+.iconCon a:nth-child(6){
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.icon .over{
+    display: none;
+}
+
+.icon .default{
+    width: 50px;
+    margin-top: 15px;
+}
+
+.icon .default:nth-child(5){
+    margin-bottom: 4px;
+}
+.iconCon .iconTxt{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.bookCon{
+    margin-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    padding-bottom: 36px;
+    
+}
+
+.bookCon .btnBox{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.bookCon .btnBox button{
+    background-color: transparent;
+    border: 0;
+    width: 110px;
+    height: 30px;
+    border-bottom: 1px solid #777;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.bookCon .btnBox .recomm{
+    background-color: #03b2a8;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.bookBox{
+    z-index: 9;
+    color: #fff;
+    
+}
+
+.book .bookPc{
+    display: none;
+}
+.bookBox .book div{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.bookBox .book{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+.bookBox .book2{
+    display: none;
+}
+.bookBox .book3{
+    display: none;
+}
+.bookBox div{
+    text-align: center;
+
+}
+
+.bookBox img{
+    width: 90px;
+    box-shadow: 5px 5px 10px #464646;
+}
+.bookBox .title{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.bookBox .writer{
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.bookBoxBg{
+    width: 100%;
+    height: 140px;
+    background-color: #03b2a8;
+    position: absolute;
+    top: 120px;
+    right: 0;
+
+}
+
+
+
+.cuCon{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.cuCon h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: lighter;
+
+}
+.cuCon h5{
+    font-size: 13px;
+    margin-bottom: 25px;
+    font-weight: lighter;
+
+}
+
+.cuCon .cuBoxWrap{
+    overflow-x: scroll;
+    padding-bottom: 20px;
+
+}
+
+.cuCon .cuBox{
+    display: flex;
+    width: 1000px;
+}
+.cuCon .cuBox div{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cuCon .cuBox div:first-child{
+    padding-left: 20px;
+    margin-left: 0;
+}
+.cuCon .cuBox div:last-child{
+    margin-right: 0;
+    padding-right: 20px;
+}
+.cuCon .cuBox div img{
+    width: 150px;
+
+}
+.cuCon .cuBox div p{
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+.noticeCon{
+
+    background-color: #afe2df;
+    padding-bottom: 30px;
+    margin-top: 60px;
+    padding-top: 10px;
+}
+
+.notice{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.notice h4{
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.notice .plus{
+    background-color: transparent;
+    border: 0;
+}
+.notice .plus span{
+    width: 20px;
+    height: 5px;
+    background-color: #03b2a8;
+    display: block;
+}
+.notice .plus .bar{
+    position: absolute;
+    top: 22px;
+    right: 20px;
+}
+.notice .plus .ro{
+    transform: rotate(90deg);
+}
+
+
+
+.noTxtCon{
+    margin-top: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #03b2a8;
+    border-top: 1px solid #03b2a8;
+}
+.noTxt{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.noTxt div{
+    
+}
+.noTxt a{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.noTxt p{
+    font-size: 15px;
+    margin-top: 5px;
+
+}
+.noTxt .txt{}
+.noTxt .date{}
+
+.wishCon{
+    display: none;
+}
+
+.adCon{
+    margin-top: 20px;
+    width: calc(100vw - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.adCon .adImg{
+    height: calc(100vw - 40px);
+    background-position: center;
+    background-size: cover;
+}
+.adCon .adImg a{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.adCon .adImg1{
+
+    background-image: url(../images_mo/Imgbox1.jpg);
+
+}
+.adCon .adImg2{
+
+    background-image: url(../images_mo/imgbox2.png);
+
+}
+.adCon .adImg3{
+
+    background-image: url(../images_mo/imgbox3.png);
+}
+.adCon .adImg4{
+    background-image: url(../images_mo/Imgbox4.jpg);
+}
+.adCon .adImg5{
+    background-image: url(../images_mo/Imgbox5.jpg);
+}
+
+.adCon .slick-dots button{
+    width: 15px;
+    height: 15px;
+    border: 0;
+    border-radius: 50%;
+    text-indent: -9999px;
+    background-color: #03b2a8;
+    margin-top: 20px;
+}
+.adCon .slick-dots .slick-active button{
+    background-color: #fff;
+    border: 1px solid #03b2a8;
+}
+.adCon .slick-dots{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    cursor: pointer;
+}
+.adCon .slick-dots li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+footer{
+    
+}
+
+.fWrap1{
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+.fMenu{
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fMenu li{
+    width: 33.33%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.fMenu li:not(:nth-child(3n)):after{
+    content: '';
+    width:2px;
+    height:10px;
+    position: absolute;
+    right:2px;
+    bottom:2px;
+    background-color: #03b2a8;
+}
+.fMenu li a{}
+
+.fWrap2{
+    border-top: 1px solid #03b2a8;
+    padding-top: 10px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.fWrap2 h4{
+    text-align: center;
+    padding-top: 15px;
+}
+.fWrap2 a{}
+.fWrap2 img{
+    height: 36px;
+    
+}
+
+
+
+.fWrap2 address{
+    font-size: 12px;
+    font-style: normal;
+    margin-top: 15px;
+    text-align: center;
+}
+.fWrap2 .copyright{
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
