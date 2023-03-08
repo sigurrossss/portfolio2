@@ -494,10 +494,10 @@ nav a.active span{
       color: #444;
     }
     .deCon3 h4{
-      margin-top: 40px;
-      font-size: 60px;
+      margin-top: 55px;
+      font-size: 40px;
       font-family: 'Times New Roman', Times, serif;
-      font-weight: lighter;
+      font-weight: 900;
       /* margin-left: ; */
     }
 
@@ -546,22 +546,29 @@ nav a.active span{
     }
 
     .deCon3 .colorBox .c1{
-      background-color: #000;
+      background-color: #777;
     }
     .deCon3 .colorBox .c2{
-      background-color: #484848;
+      background-color: #03b2a8;
     }
     .deCon3 .colorBox .c3{
-      background-color: #6c6c6c;
+      background-color: #afe2df;
     }
     .deCon3 .colorBox .c4{
-      background-color: #ddd;
+      background-color: #e0e0e0;
     }
 
     .deCon3 .mockup{
       margin-top: 155px;
+      position: relative;
     }
 
+    .deCon3 .phone{
+      width: 220px;
+      position: absolute;
+      top: 180px;
+      left: 420px;
+    }
 
     .gallWrap{
       height: 100vh;
