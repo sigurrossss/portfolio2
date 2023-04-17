@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        @font-face {
+            font-family: pretendard;
+            src: url(../../../font/PretendardVariable.woff2);
+        }
+
+        body{
+            background-color: #191919;
+            font-family: 'pretendard';
+        }
+
+        .bnImg{
+            background-image: url(../playlist/images/BG3_mo.jpg);
+            width: 100%;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .bnImg:after{
+            content: '';
+            width: 100%;
+            height: 50%;
+            background-image: linear-gradient(to bottom, transparent 60%, #191919 90%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .musicCon{
+            padding: 0 20px;
+            margin-top: 30px;
+            padding-bottom: 30px;
+
+        }
+
+        .selBtn{
+            margin-bottom: 20px;
+        }
+        .selBtn button{
+            font-size: 12px;
+            color: #818181;
+            width: 60px;
+            height: 22px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 1px solid #818181;
+        }
+        .music{
+            display: flex;
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .checkBox{
+            margin-top: 3px;
+        }
+
+        .checkBox input[type=checkbox]{
+            position: absolute;
+            visibility: hidden;
+        }
+
+        input[type=checkbox]:checked ~ .check {
+            border: 1px solid #4e4e4e;
+            position: relative;
+        }
+        
+        input[type=checkbox]:checked ~ .check::before{
+            background: #8f8f8f;
+            width: 85%;
+            content: '';
+            height: 85%;
+            position: absolute;
+            border-radius: 50%;
+            top:5%;
+            left:5%;
+        }
+        
+        input[type=checkbox]:checked ~ label{
+            color: #4e4e4e;
+        }
+
+
+
+        .checkBox .check{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid #4e4e4e;
+            margin-right: 15px;
+            display: block;
+
+        }
+        .number{
+            color: #fff;
+            margin-right: 20px;
+            width: 10px;
+        }
+        .title{
+            color: #fff;
+        }
+
+        .title:hover{
+        color: #00cd3c;
+    }
+
+        .btnBox{
+            margin-left: auto;
+        }
+        .btnBox button{
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+        .btnBox button img{
+            width: 25px;
+        }
+
+
+
+
+        .music:after{
+            content: '';
+            width: 100%;
+            display: block;
+            height: 1px;
+            background-image: 
+            linear-gradient(to right, transparent 5%, #ccc 50%, transparent 100%);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+
+        .pcBtn{
+            display: none;
+        }
+
+
+        .playBtn{
+            margin-top: 30px;
+            margin-left: auto;
+        }
+        .playBtn button{
+            font-size: 12px;
+            color: #818181;
+            width: 60px;
+            height: 22px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 1px solid #818181;
+        }
+
+        @media all and (min-width:768px){
+
+            .bnImg{
+                background-image: url(../playlist/images/BG3_mo.jpg);
+                height: 500px;
+            }
+
+            .musicCon{
+                padding: 0 30px;
+                margin-top: 40px;
+            
+            
+            }
+
+            .music{
+                align-items: center;
+            }
+            
+            .selBtn{
+                margin-bottom: 30px;
+            }
+            .selBtn button{
+                font-size: 14px;
+                width: 70px;
+                height: 25px;
+            }
+            
+            .checkBox{
+                margin-top: 4px;
+            }
+            
+            input[type=checkbox]:checked ~ .check::before{
+                top:7%;
+                left:7%;
+            }
+            
+            .number{
+                margin-right: 30px;
+            }
+            .title{
+            }
+
+
+            .btnBox button img{
+                width: 30px;
+            }
+            
+            
+            .playBtn{
+                margin-top: 40px;
+            }
+            .playBtn button{
+                font-size: 14px;
+                width: 70px;
+                height: 25px;
+            }
+        }
+
+        @media all and (min-width:1024px){
+
+            .bnImg{
+                background-image: url(../playlist/images/BG3.jpg);
+                height: 650px;
+            }
+
+            .musicCon{
+                width: 1000px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 0;
+                margin-top: 30px;
+            }
+
+
+            .selBtn button{
+                cursor: pointer;
+            }
+
+            .selBtn button:hover{
+                color:#fff;
+                background-color: #818181;
+                border: 0;
+            }
+
+            .btnBox{
+                display: flex;
+            }
+
+            .btnBox button{
+                cursor: pointer;
+                
+            }
+            .btnBox button img{
+                width: 30px;
+            }
+
+            
+            
+            .playBtn{
+                margin-top: 40px;
+                padding-bottom: 50px;
+            }
+            .playBtn button{
+                cursor: pointer;
+            }
+
+            .playBtn button:hover{
+                color:#fff;
+                background-color: #818181;
+                border: 0;
+            }
+
+            .pcBtn{
+                display: block;
+                margin-left: 5px;
+            }
+
+            .moBtn{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bnImg"></div>
+
+    <div class="musicCon">
+
+        
+
+        <div class="selBtn">
+            <button>전체선택</button>
+        </div>
+
+        <div class="musicWrap">
+        <div class="music">
+
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+
+            <p class="number">1</p>
+
+            <p class="title">Autumn Leaves</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">2</p>
+
+            <p class="title">Waltz For Debby</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">3</p>
+
+            <p class="title">My Foolish Heart (Live)</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">4</p>
+
+            <p class="title">Midnight Mood</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">5</p>
+
+            <p class="title">A Time For Love</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">6</p>
+
+            <p class="title">The Two Lonely People</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">7</p>
+
+            <p class="title">You Must Believe In Spring</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">8</p>
+
+            <p class="title">Emily (Live At The Village Vanguard, 1967)</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">9</p>
+
+            <p class="title">All Of You (Remastered)</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">10</p>
+
+            <p class="title">My Funny Valentine</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">11</p>
+
+            <p class="title">Morning Glory</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">12</p>
+
+            <p class="title">T. T. T. (Twelve Tone Tune)</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">13</p>
+
+            <p class="title">Fun Ride</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">14</p>
+
+            <p class="title">Vierd Blues</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">15</p>
+
+            <p class="title">Gone With The Wind</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <div class="pcBtn">
+
+                    <button>
+                        <img src="images/icon2.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon3.png">
+                    </button>
+
+                    <button>
+                        <img src="images/icon4_d.png">
+                    </button>
+                </div>
+
+                <button class="moBtn">
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+
+    </div><!--musicWrap-->
+
+        <div class="playBtn">
+            
+            <button>전체재생</button>
+            <button>선택재생</button>
+            <button>다운로드</button>
+            <button>선물하기</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+
+    
+
+    $('.selBtn button').click(function(){
+
+    $('.checkBox input[type=checkbox]').attr('checked',true)
+
+    });
+
+    </script>
+    
+</body>
+</html>

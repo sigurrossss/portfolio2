@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Maker</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        @font-face {
+            font-family: pretendard;
+            src: url(../../../font/PretendardVariable.woff2);
+        }
+
+        body{
+            background-color: #191919;
+            font-family: 'pretendard';
+        }
+
+        .bnImg{
+            background-image: url(../mix/images/bg_mo.jpg);
+            width: 100%;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .bnImg:after{
+            content: '';
+            width: 100%;
+            height: 50%;
+            background-image: linear-gradient(to bottom, transparent 60%, #191919 90%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .albumCon{
+            
+            margin-top: 80px;
+            padding-bottom: 50px;
+            
+        }
+
+        .alScr{
+            width: 100%;
+            overflow-x: scroll;
+            padding-bottom: 50px;
+
+        }
+        
+        .alWrap{
+            display: flex;
+            justify-content: center;
+            width: 1000px;
+            padding-left: 20px;
+        }
+
+        .album{
+            margin: 0 10px;
+        }
+        .album:last-child{
+            padding-right: 30px;
+        }
+        .album a div{
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .album a div img{
+            width: 180px;
+        }
+
+        .album .exp{
+            width: 180px;
+            height: 15px;
+            font-size: 14px;
+            color: #00cd3c;
+        }
+
+        @media all and (min-width:768px){
+            .bnImg{
+                height: 500px;
+            }
+
+            .alWrap{
+                display: flex;
+                justify-content: center;
+                width: 1200px;
+                padding-left: 30px;
+            }
+
+            .album{
+                margin: 0 15px;
+            }
+            .album:last-child{
+                padding-right: 30px;
+            }
+            .album a div{
+                width: 200px;
+                height: 200px;
+
+            }
+            .album a div img{
+                width: 200px;
+            }
+        }
+
+        @media all and (min-width:1024px){
+            .bnImg{
+                background-image: url(../mix/images/bg.jpg);
+                height: 650px;
+            }
+
+            .albumCon{
+            
+                margin-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .alScr{
+                overflow-x: unset;
+                
+            }
+            
+            .alWrap{
+                padding: 0;
+                width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .album{
+                margin: 0 20px;
+            }
+            .album:last-child{
+                padding:0;
+            }
+            .album a div{
+                width: 220px;
+                height: 220px;
+                margin-top: 10px;
+            }
+            .album a div img{
+                width: 220px;
+            }
+
+            .album .exp{
+                width: 220px;
+                font-size: 16px;
+            }
+            .album .list{
+                font-size: 18px;
+                margin-top: 10px;
+                color: #fff;
+            }
+
+            .album:hover .list{
+                color: #00cd3c;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bnImg"></div>
+
+    <div class="albumCon">
+        <div class="alScr">
+
+            <div class="alWrap">
+                <div class="album">
+                    <a href="#">
+                        
+                            <p class="exp">
+                                실시간 추천
+                            </p>
+
+                            <div>
+                                <img src="images/afternoon.jpg">
+                            </div>
+
+                            <p class="list">
+                                오후의 MIX
+                            </p>
+
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+                            <p class="exp">
+                                나만의 믹스를 만들어 보세요!
+                            </p>
+                            <div>
+                                <img src="images/img2.jpg">
+                            </div>
+                            <p class="list">
+                                MIX MAKER
+                            </p>
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+                            <p class="exp">
+                                
+                            </p>
+                            <div>
+                                <img src="images/img3.jpg">
+                            </div>
+                            <p class="list">
+                                최근 들은 곡
+                            </p>
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+
+
+                            <p class="exp">
+                                #Like
+                            </p>
+                            <div>
+                                <img src="images/img4.jpg">
+                            </div>
+                            <p class="list">
+                                좋아요한 곡
+                            </p>
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+                    
+
+                            <p class="exp">
+                                
+                            </p>
+                            <div>
+                                <img src="images/img5.jpg">
+                            </div>
+                            <p class="list">
+                                많이 들은 곡
+                            </p>
+
+                    </a>
+                </div> 
+            </div>
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

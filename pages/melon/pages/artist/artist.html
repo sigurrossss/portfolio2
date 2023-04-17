@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        @font-face {
+            font-family: pretendard;
+            src: url(../../../font/PretendardVariable.woff2);
+        }
+
+        body{
+            background-color: #191919;
+            font-family: 'pretendard';
+        }
+
+        .bnImg{
+            background-image: url(../artist/images/BG_mo.jpg);
+            width: 100%;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .bnImg:after{
+            content: '';
+            width: 100%;
+            height: 50%;
+            background-image: linear-gradient(to bottom, transparent 60%, #191919 90%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .albumTxt{
+            padding: 0 20px;
+            
+        }
+        .albumTxt h1{
+            font-size: 20px;
+            font-weight: 300;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .albumTxt2 div{
+            display: flex;
+            
+        }
+
+        .albumTxt div .list{
+            color: #a6a6a6;
+            font-size: 13px;
+            width: 70px;
+        }
+        .albumTxt div .info{
+            
+            font-size: 13px;
+            color: #fff;
+        }
+
+        .introCon{
+            margin-top: 20px;
+        }
+
+        .introCon .intro{
+            color: #a6a6a6;
+            font-size: 13px;
+        }
+        .introCon .introTxt{
+            margin-top: 5px;
+            font-size: 13px;
+            color: #fff;
+            
+        }
+
+        .albumCon{
+            
+            margin-top: 80px;
+            padding-bottom: 50px;
+            
+        }
+
+        .alScr{
+            width: 100%;
+            overflow-x: scroll;
+            padding-bottom: 30px;
+
+        }
+        
+        .alWrap{
+            display: flex;
+            justify-content: center;
+            width: 1000px;
+            padding-left: 20px;
+        }
+
+        .album{
+            margin: 0 10px;
+        }
+        .album:last-child{
+            padding-right: 30px;
+        }
+        .album a div{
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .album a div img{
+            width: 180px;
+        }
+        .album .pBox{
+            margin-top: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 170px;
+            height: auto;
+        }
+        .album .pBox .song{
+            color: #fff;
+            font-size: 16px;
+        }
+        .album .pBox .artist{
+            color: #c2c2c2;
+            font-size: 15px;
+        }
+        .album .pBox .date{
+            color: #929292;
+            font-size: 13px;
+        }
+        .album .pBox .form{
+            color: #929292;
+            font-size: 13px;
+        }
+
+        @media all and (min-width:768px){
+            .bnImg{
+            
+                height: 500px;
+            }
+
+            .albumTxt{
+                padding: 0;
+                position: absolute;
+                top: 100px;
+                left: 350px;
+            }
+
+            .albumTxt h1{
+                font-size: 24px;
+                font-weight: 500;
+                color: #000;
+                margin-bottom: 20px;
+            }
+
+            .albumTxt div .list{
+                font-size: 14px;
+                width: 70px;
+            }
+            .albumTxt div .info{
+                font-size: 14px;
+                color: #000;
+            }
+
+            .introCon{
+                margin-top: 20px;
+            }
+
+            .introCon .intro{
+                font-size: 14px;
+            }
+            .introCon .introTxt{
+                margin-top: 5px;
+                font-size: 14px;
+                color: #000;
+                padding-right: 30px;
+            }
+            
+            .alWrap{
+                display: flex;
+                justify-content: center;
+                width: 1200px;
+                padding-left: 30px;
+            }
+
+            .album{
+                margin: 0 15px;
+            }
+            .album:last-child{
+                padding-right: 30px;
+            }
+            .album a div{
+                width: 200px;
+                height: 200px;
+
+            }
+            .album a div img{
+                width: 200px;
+            }
+            .album .pBox{
+                margin-top: 8px;
+                width: 200px;
+            }
+    
+        }
+
+        @media all and (min-width:1024px){
+            .bnImg{
+            background-image: url(../artist/images/BG.jpg);
+            height: 650px;
+        }
+
+        .albumTxt{
+            top: 120px;
+            left: 550px;
+        }
+
+        .albumTxt h1{
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+
+        .albumTxt div .list{
+            font-size: 14px;
+            width: 80px;
+        }
+        .albumTxt div .info{
+            
+            font-size: 14px;
+        }
+
+        .introCon{
+            margin-top: 30px;
+        }
+
+        .introCon .intro{
+            font-size: 14px;
+        }
+        .introCon .introTxt{
+            font-size: 14px;
+            max-width: 700px;
+            
+        }
+
+        .albumCon{
+            
+            margin-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .alScr{
+            overflow-x: unset;
+            
+        }
+        
+        .alWrap{
+            padding: 0;
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .album{
+            margin: 0 20px;
+        }
+        .album:last-child{
+            padding:0;
+        }
+        .album a div{
+            width: 220px;
+            height: 220px;
+        }
+        .album a div img{
+            width: 220px;
+        }
+        .album .pBox{
+            margin-top: 10px;
+            width: 220px;
+        }
+        .album .pBox .song{
+            font-size: 18px;
+        }
+        .album .pBox .artist{
+            font-size: 16px;
+        }
+        .album .pBox .date{
+            font-size: 14px;
+        }
+        .album .pBox .form{
+            font-size: 14px;
+        }
+
+        .album:hover .song{
+            color: #00cd3c;
+        }
+
+        .album:hover .artist{
+            color: #fff;
+        }
+
+        .album:hover .date{
+            color: #ddd;
+        }
+
+        .album:hover .form{
+            color: #ddd;
+        }
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="bnImg"></div>
+
+    <div class="albumTxt">
+        <h1>So!YoON! (황소윤)</h1>
+        
+
+        <div class="albumTxt2">
+
+            <div>
+                <p class="list">국적</p>
+                <p class="info">대한민국</p>
+            </div>
+
+            <div>
+                <p class="list">활동유형</p>
+                <p class="info">여성, 솔로</p>
+            </div>
+
+            <div>
+                <p class="list">활동년대</p>
+                <p class="info">2010, 2020</p>
+            </div>
+
+            <div>
+                <p class="list">활동장르</p>
+                <p class="info">R&B/Soul, 인디음악, 록/메탈</p>
+            </div>
+
+            <div>
+                <p class="list">소속사</p>
+                <p class="info">매직스트로베리사운드</p>
+            </div>
+
+            <div>
+                <p class="list">소속그룹</p>
+                <p class="info">새소년, 모임 별(Byul.org)</p>
+            </div>
+        </div>
+
+            <div class="introCon">
+                <p class="intro">아티스트 소개</p>
+                <p class="introTxt">싱어송라이터 So!YoON!은 18세에 밴드 ‘새소년’을 결성하면서 음악가로서의 커리어를 시작했다. 
+                    그녀가 가진 뛰어난 작곡 센스와 무대 위에서의 에너지, 그리고 잊기 힘든 존재감의 목소리는 이내 그녀와 그녀의 밴드를 특별한 존재로 만들었고, 
+                    한국 음악 씬에서 가장 주목받는 밴드가 되며 한국대중음악상 ‘올해의 신인’과 ‘최우수 록 노래’를 수상하며 데뷔 첫 해에 최고의 마침표를 찍는다. 
+                    이듬해부터는 활동 반경을 해외로 넓혀 아시아, 유럽, 북미 등에서 연이어 공연을 갖고 2020년엔 Fender의 글로벌 아티스트로 선정이 되며, 
+                    국내 뿐만 아니라 세계에서 주목 받는 밴드가 되었다.</p>
+            </div>
+        
+    </div>
+
+    <div class="albumCon">
+        <div class="alScr">
+
+            <div class="alWrap">
+                <div class="album">
+                    <a href="#">
+                        <div>
+                            <img src="images/al1.jpg">
+                        </div>
+
+                        <div class="pBox">
+                            <p class="song">
+                                Episode1 : Love
+                            </p>
+
+                            <p class="artist">
+                                So!YoON!
+                            </p>
+
+                            <p class="date">
+                                2023.03.14
+                            </p>
+
+                            <p class="form">
+                                정규
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+                        <div>
+                            <img src="images/al2.jpg">
+                        </div>
+
+                        <div class="pBox">
+
+                            <p class="song">
+                                Prologue : Love
+                            </p>
+
+                            <p class="artist">
+                                So!YoON!
+                            </p>
+
+                            <p class="date">
+                                2023.02.17
+                            </p>
+
+                            <p class="form">
+                                싱글
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+                        <div>
+                            <img src="images/al3.jpg">
+                        </div>
+
+                        <div class="pBox">
+                            <p class="song">
+                                Be Sweet (Korean Version)
+                            </p>
+
+                            <p class="artist">
+                                Japanese Breakfast
+                            </p>
+
+                            <p class="date">
+                                2022.07.20
+                            </p>
+
+                            <p class="form">
+                                싱글
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+                        <div>
+                            <img src="images/al4.jpg">
+                        </div>
+
+                        <div class="pBox">
+                            <p class="song">
+                                joke!
+                            </p>
+
+                            <p class="artist">
+                                새소년
+                            </p>
+
+                            <p class="date">
+                                2021.11.23
+                            </p>
+
+                            <p class="form">
+                                싱글
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="album">
+                    <a href="#">
+                        <div>
+                            <img src="images/al5.jpg">
+                        </div>
+
+                        <div class="pBox">
+                            <p class="song">
+                                영화 십개월의 미래 OST (TEN MONTHS OST)
+                            </p>
+
+                            <p class="artist">
+                                모임 별 (Byul.org)
+                            </p>
+
+                            <p class="date">
+                                2021.10.10
+                            </p>
+
+                            <p class="form">
+                                OST
+                            </p>
+                        </div>
+                    </a>
+                </div> 
+            </div>
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

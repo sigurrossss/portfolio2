@@ -133,7 +133,7 @@ $(window).on('scroll',function(){
     let box3Top = $('.design1').offset().top;
     let box4Top = $('.design2').offset().top;
     let box5Top = $('.design3').offset().top;
-    let box6Top = $('.gallWrap').offset().top;
+    let box6Top = $('.design4').offset().top;
 
     console.log(scr);
 

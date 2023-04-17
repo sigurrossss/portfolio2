@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Albums</title>
+    <link rel="stylesheet" href="css/stlye.css">
+</head>
+<body>
+    <div class="bnImg"></div>
+
+    <div class="albumTxt">
+        <h1>Mercurial</h1>
+        <p class="artist">실리카겔</p>
+        <p class="date">2023.03.15</p>
+
+        <div class="albumTxt2">
+
+            <div>
+                <p class="list">장르</p>
+                <p class="info">록/메탈, 인디음악</p>
+            </div>
+
+            <div>
+                <p class="list">발매사</p>
+                <p class="info">카카오엔터테인먼트</p>
+            </div>
+
+            <div>
+                <p class="list">기획사</p>
+                <p class="info">매직스트로베리사운드</p>
+            </div>
+        </div>
+
+            <div class="introCon">
+                <p class="intro">앨범소개</p>
+                <p class="introTxt">2022년 실리카겔은 싱글 [NO PAIN] 발매로 새로운 리스너들의 유입에 성공 가도를 올리며 밴드신에서의 입지가 그 어느 때보다 단단해진 해였다. 
+                    이에 제20회 2023 한국대중음악상 ‘최우수 모던록 노래’로 선정되며 2년 연속 수상의 영예를 안았다. 각종 뮤직 페스티벌, 장르의 경계를 허무는
+                    브랜드 협업 등 활발한 행보에 힘입어 2023년 4월, EP 발매와 최대 규모의 단독 공연을 앞두고 있다. 앞서 EP 선공개 타이틀 [Mercurial]을
+                    공개하며 새로운 활동에 포문을 연다.</p>
+            </div>
+        
+    </div>
+
+    <div class="musicCon">
+
+        
+
+        <div class="selBtn">
+            <button>전체선택</button>
+        </div>
+
+        <div class="musicWrap">
+        <div class="music">
+
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+
+            <p class="number">1</p>
+
+            <p class="title">Mercurial</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <button>
+                    <img src="images/icon_mo.png">
+                </button>
+            </div>
+
+        </div>
+
+
+
+        <div class="music">
+            <div class="checkBox">
+                <label>
+                    <input type="checkbox" id="t-option" name="selector">
+                    <div class="check"></div>
+                    
+                </label>
+            </div>
+
+            <p class="number">2</p>
+
+            <p class="title">Mercurial (Inst.)</p>
+
+            <div class="btnBox">
+                <button>
+                    <img src="images/Icon1.png">
+                </button>
+
+                <button>
+                    <img src="images/icon_mo.png">
+                </button>
+
+            </div>
+
+        </div>
+    </div><!--musicWrap-->
+
+        <div class="playBtn">
+            
+            <button>전체재생</button>
+            <button>선택재생</button>
+            <button>다운로드</button>
+            <button>선물하기</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+ 
+let dataAlbum = localStorage.getItem('ALBUM');
+    dataAlbum = JSON.parse(dataAlbum);
+
+let aSong = dataAlbum.song,
+    aSinger = dataAlbum.singer,
+    aDate = dataAlbum.date,
+    aGenre  = dataAlbum.genre,
+    aRelease = dataAlbum.release,
+    aCompany = dataAlbum.company,
+    aIntro = dataAlbum.intro,
+    aCover = dataAlbum.cover,
+    aCoverMo = dataAlbum.cover_mo,
+    aTheme = dataAlbum.theme;
+
+
+
+    $('h1').text(aSong);
+    $('.artist').text(aSinger);
+    $('.date').text(aDate);
+    $('.albumTxt2 div').eq(0).find('.info').text(aGenre);
+    $('.albumTxt2 div').eq(1).find('.info').text(aRelease);
+    $('.albumTxt2 div').eq(2).find('.info').text(aCompany);
+    $('.introTxt').text(aIntro);
+
+
+ 
+    let winWidth = $(window).width();
+
+    if(winWidth < 768){
+        $('.bnImg').css({
+        'backgroundImage' : `url(../album/images/${aCoverMo})`
+    });
+    }else{
+        $('.bnImg').css({
+        'backgroundImage' : `url(../album/images/${aCover})`
+    });
+    }
+
+
+    $(window).resize(function(){
+
+        let winWidth2 = $(window).width()
+
+        if(winWidth2 >=768){
+            setTimeout(function(){
+                location.reload();
+            },500)
+        }
+
+    });
+
+
+
+    $('.albumTxt').removeClass('white black');
+    $('.albumTxt').addClass(aTheme);
+
+
+
+
+
+let songs = dataAlbum.songs;
+let musicWrap = document.querySelector('.musicWrap');
+musicWrap.innerHTML =``;
+
+// elements
+
+for(let i = 0; i<songs.length; i++){
+
+
+    //.music div생성
+    let musicDiv = document.createElement('div');
+        musicDiv.classList.add('music');
+
+    //.checkbox div 생성
+    let checkDiv = document.createElement('div');
+        checkDiv.classList.add('checkBox');
+        
+    //.checkbox>label 생성
+    let musicLabel = document.createElement('label');
+    
+    
+    //input태그 생성
+    let checkInput = document.createElement('input');
+        checkInput.type = 'checkbox';
+    
+    //div.check 생성
+    let innerCheck = document.createElement('div');
+        innerCheck.classList.add('check');
+
+    //label안에 요소넣기
+    musicLabel.append(checkInput);
+    musicLabel.append(innerCheck);
+    //div.music안에 요소 넣기
+    checkDiv.append(musicLabel);
+
+
+    //넘버붙이기
+    let numbering = i+1;
+    let p = document.createElement('p');
+        p.classList.add('number');
+       p.innerText = numbering;
+
+    //타이틀넣기
+    let tit = document.createElement('p');
+        tit.classList.add('title');
+     tit.innerText = songs[i];
+
+
+     //btnBox영역 만들기
+
+     let btnSet = document.createElement('div');
+        btnSet.classList.add('btnBox');
+
+        btnSet.innerHTML = `<button><img src="images/Icon1.png"></button> <button><img src="images/icon_mo.png"></button>`
+
+
+    //전체조립
+    musicDiv.append(checkDiv);
+    musicDiv.append(p);
+    musicDiv.append(tit);
+    musicDiv.append(btnSet);
+    
+
+
+      
+
+     musicWrap.append(musicDiv);//최종출력
+
+
+
+
+}
+
+
+
+
+$('.selBtn button').click(function(){
+
+        $('.checkBox input[type=checkbox]').attr('checked',true)
+
+});
+
+
+    </script>
+
+</body>
+</html>

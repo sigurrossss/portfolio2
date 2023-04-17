@@ -1,0 +1,1037 @@
+@media all and (min-width:768px){
+    nav{
+        height: 100px;
+    }
+
+    nav .mainIcon{
+        margin: 0 40px;
+        
+    }
+
+    nav .mainIcon a img{
+        height: 50px;
+    }
+
+    .playBarCon{
+        height: 100px;
+        bottom: 100px;
+    }
+    .playBar{
+        height: 100px;
+    }
+
+    .playBar .pbImg{
+        width: 70px;
+        height: 70px;
+        margin-left: 40px;
+    }
+    .playBar .pbImg img{
+        width: 70px;
+    }
+    .playBar .pbTitle{
+        font-size: 22px;
+    }
+    .playBar .pbBtn button{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .playBar .pbBtn button img{
+        width: 50px;
+    }
+
+
+    header{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    h1 img{
+        width: 38px;
+    }
+    .nickname img{
+        width: 40px;
+        height: 40px;
+    }
+    .nickname div{
+        font-size: 18px;
+        margin-left: 8px;
+        margin-top: 3px;
+    }
+
+    .newAlbum{
+        margin-top: 30px;
+        padding-left: 30px;
+    }
+    .newAlbum h2{
+        font-size: 18px;
+    }
+    .newFlex button img{
+        width: 30px;
+    }
+    .newFlex button{
+        padding-right: 30px;
+    }
+
+    .albumScr{
+        padding-bottom: 50px;
+    }
+
+    .album{
+        width: 1100px;
+        
+    }
+
+    .album div .albumImg{
+        width: 200px;
+        height: 300px;
+        
+    }
+    
+    .album div .albumImg img{
+        width: 330px;
+        
+    }
+    .album div:last-child{
+        padding-right: 30px;
+    }
+
+    .album div h3{
+        font-size: 16px;
+        margin-top: 8px;
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .album div p{
+        font-size: 14px;
+    }
+
+    .top100{
+        margin-top: 50px;
+        padding-left: 30px;
+        
+    }
+
+    .top100 h3{
+        font-size: 18px;
+    }
+    .top100 .etcBtn{
+        padding-right: 30px;
+    }
+    .top100 button img{
+        width: 30px;
+    }
+    .topSongScr{
+        padding-bottom: 50px;
+    }
+    .topSong{
+        width: 940px;
+    }
+    .topSong:last-child{
+        padding-right: 30px;
+    }
+    .topSongBox .song{
+        width: 300px;
+        height: 80px;
+        padding-left: 12px;
+        margin-bottom: 12px;
+    }
+    .topSongBox .song .songImg{
+        width: 65px;
+        height: 65px;
+    }
+    .topSongBox .song .songImg img{
+        width: 65px;
+    }
+    
+    .topSongBox .song .pBox{
+        margin-left: 12px;
+        width: 150px;
+    }
+    .topSongBox .song .title{
+        font-size: 18px;
+        width: 140px; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .topSongBox .song .artist{
+        font-size: 15px;
+    }
+    
+    .topSongBox .song button img{
+        width: 50px;
+    }
+
+    .favCon{
+        margin-top: 50px;
+    }
+    .favFlex{
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    }
+    .favPBox{
+        font-size: 18px;
+    }
+    
+    .favFlex button img{
+        width: 30px;
+    }
+    
+    .favBoxCon{
+        padding: 0 30px;
+        justify-content: center;
+    }
+    
+    .favBox div{
+        width: 280px;
+        height: 280px;
+        margin: 0 20px
+    }
+    .favBox div img{
+        height: 280px;
+    }
+    
+    
+    .favBox .favTitle{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .favBox .favsubT{
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    
+    
+    .bnCon{
+        margin-top: 50px;
+    }
+    .bnCon .bnMo{
+        display: none;
+    }
+
+    .bnCon .bnP{
+        display: block;
+    }
+    .bnCon .bnPc{
+        background-image: url(../images/MileyCyrus.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+    }
+    /* .bnCon p{
+        right: 30px;
+    }
+    
+    .mileyT{
+        font-size: 40px;
+        top: 55px;
+    }
+    .miley{
+        font-size: 45px;
+        top: 88px;
+    } */
+    
+    
+    
+    .fWrap1{
+        font-size: 16px;
+    }
+    .fWrap1 .fMenu{
+        padding: 0 30px;
+    }
+    .fWrap2{
+        margin-top: 20px;
+    }
+    .fWrap2 .fMenu2{
+        font-size: 14px;
+        padding: 0 30px;
+
+    }
+    .fWrap2 .fMenu2 li{
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .fLogo a img{
+        width: 130px;
+    }
+    
+    address{
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    .copyright{
+        font-size: 14px;
+        margin-top: 25px;
+        padding-bottom: 250px;
+    }
+
+}
+
+
+@media all and (min-width:1024px){
+    aside{
+        width: 250px;
+        height: 100%;
+        background-color: #20252a;
+        display: block;
+        position: fixed;
+        right: 0;
+        z-index: 9;
+
+    }
+
+
+    .albumArt img{
+        width: 250px;
+    }
+
+    .psPBox{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .psPBox .psTitle{
+        font-size: 25px;
+        color: #fff;
+    }
+    .psPBox .psArtist{
+        color: #9b9b9b;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .playLineCon{
+        margin-top: 20px;
+    }
+    .playLineCon .playLineTime{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        font-size: 12px;
+        color: #9b9b9b;
+
+    }
+    .playLineCon .start{
+        display: flex;
+    }
+    .start .min{
+        display: flex;
+    }
+    .start .sec{
+        display: flex;
+    }
+
+
+    .playLine{
+        width: 220px;
+        height: 10px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+
+    }
+    .playLine .pLine{
+        width: 100%;
+        height: 2px;
+        border-radius: 100px;
+        background-color: #eee;
+        box-shadow: inset 2px 3px 5px #ccc;
+    }
+    .playLine .pLine .round{
+        background-color: #999;
+        border-radius: 50%;
+        border: 1px solid #666;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        animation-name: play;
+        animation-duration: 176s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-play-state: paused;
+        
+    }
+
+    .pLine .round:hover{
+            animation-play-state: paused;
+        }
+
+    @keyframes play{
+        0%{left: 0;}
+        100%{left: 100%;}
+    }
+
+    .playBtn1{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .playBtn1 .psBtn{
+        position: relative;
+        width: 45px;
+        height: 45px;
+        margin: 0 5px;
+    }
+    .playBtn1 .play{
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+
+    
+    .playBtn1 .play .over{
+        display: none;
+    }
+
+    .playBtn1 .play:hover .default{
+        display: none;
+    }
+    .playBtn1 .play:hover .over{
+        display: block;
+    }
+    .playBtn1 .stop{
+        position: absolute;
+        top: 0;
+        left:0;
+        display: none;
+        
+    }
+
+    .playBtn1 button{
+        background-color: transparent;
+        border: 0;
+        
+        cursor: pointer;
+    }
+    .playBtn1 button img{
+        width: 45px;
+        height: 45px;
+        
+    }
+    .playBtn2{
+        margin-top: 35px;
+        
+        display: flex;
+        
+    }
+    .playBtn2 button{
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        
+    }
+    .playBtn2 button img{
+        height: 23px;
+    }
+    
+    .pBLeft{
+        display: flex;
+        margin-right: 30px;
+    }
+
+    .heart{
+        position: relative;
+        width: 23px;
+        height: 23px;
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+
+    .heartP{
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+
+    .heartG{
+        position: absolute;
+        top: 0;
+        left:0;
+        display: none;
+    }
+
+    .sound{
+        position: relative;
+        width: 23px;
+        height: 23px;
+        
+    }
+
+    .soundO{
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+
+   
+    .soundC{
+        position: absolute;
+        top: 0;
+        left:0;
+        display: none;
+    }
+
+    .pBRight{
+        display: flex;
+        
+        
+        
+    }
+    .pBRight div{
+        margin: 0 3px;
+    }
+
+    .repeat{
+        position: relative;
+        width: 30px;
+        height: 23px;
+        
+    }
+
+    .reO{
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+    
+    .reC{
+        position: absolute;
+        top: 0;
+        left:0;
+        display: none;
+    }
+
+    .shuffle{
+        position: relative;
+        width: 30px;
+        height: 23px;
+    }
+
+    .shuC{
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+
+    .shuO{
+        position: absolute;
+        top: 0;
+        left:0;
+        display: none;
+    }
+
+    .etcH{
+        position: relative;
+    }
+    .etc{
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+
+    .etc .over{
+        display: none;
+    }
+
+    .etc:hover .default{
+        display: none;
+    }
+    .etc:hover .over{
+        display: block;
+    }
+
+    .playList{
+        margin-top: 80px;
+        font-weight: 300;
+        
+    }
+    .playList div{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .playList div:hover{
+        background-color: #353d45;
+        
+    }
+    .playList div:hover p{
+        color: #00cd3c;
+    }
+    .playList div p{
+        font-size: 15px;
+        color: #fff;
+        margin: 5px 0;
+    }
+    .playList div .listT{
+        width: 130px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .playList div .listA{
+        width: 70px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    nav{
+        width: 200px;
+        height: 100%;
+        background-color: #191919;
+        display: block;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        z-index: 9;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav .mainIcon:first-child{
+        margin-top: 200px;
+    }
+    nav .mainIcon{
+        margin: 30px 0;
+        margin-left: 30px;
+    }
+    nav .mainIcon a{
+        display: flex;
+        align-items: center;
+    }
+    nav .mainIcon p{
+        display: block;
+        font-size: 18px;
+        color: #818181;
+        margin-left: 20px;
+    }
+    nav .mainIcon:hover p{
+        color: #00cd3c;
+    }
+    nav .mainIcon a img{
+        height: 40px;
+    }
+
+    nav .mainIcon:nth-child(3){
+        display: block;
+    }
+    nav .mainIcon:last-child{
+        margin-top: 120px;
+    }
+    .pic{
+        display: block;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pic .over{
+        display: none;
+    }
+
+    .mainIcon:hover .default{
+        display: none;
+    }
+    .mainIcon:hover .over{
+        display: block;
+    }
+
+
+
+    .pic img{
+        width: 38px;
+        height: auto !important;
+    }
+
+    .playBarCon{
+        display: none;
+    }
+
+    header{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .newAlbum{
+        margin-top: 30px;
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 500px;
+    }
+    .newAlbum h2{
+        font-size: 20px;
+    }
+    .newFlex button{
+        cursor: pointer;
+        padding-right: 0;
+    }
+    .albumScr{
+        overflow-x: unset;
+    }
+    .album{
+        margin-top: 30px;
+        width: 1200px;
+    }
+
+    .album div .albumImg{
+        width: 210px;
+        height: 310px;
+    }
+    .album div .albumImg:hover{
+        width: 210px;
+        height: 350px;
+        margin-top: -20px;
+    }
+    .album div .albumImg img{
+        height: 350px;
+
+    }
+
+    .album div h3{
+        font-size: 18px;
+        margin-top: 10px;
+        width: 210px;
+    }
+    .album div p{
+        color: #929292;
+        font-size: 14px;
+    }
+    .album div:last-child{
+        padding-right: 0;
+    }
+
+    .album div .albumImg{
+        position: relative;
+        overflow: hidden;
+        transition: all 0.6s;
+        cursor: pointer;
+    }
+    .album div .albumImg .hover{
+        display: block;
+        width:100%;
+        height:50%;
+        position:absolute;
+        bottom:-50%;
+        left:0;
+        background-color:#ffffff44;
+        backdrop-filter:blur(4px);
+        -webkit-backdrop-filter:blur(4px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.6s;
+    }
+    .album div .albumImg:hover .hover{
+        bottom: 0;
+    }
+    .album div .albumImg .hover button{
+        background-color: transparent;
+        border: 0;
+
+    }
+    .album div .albumImg .hover button img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .topfavCon{
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 780px;
+    }
+
+    .topFlex button{
+        cursor: pointer;
+    }
+
+    .top100{
+        margin-top: 50px;
+        padding-left: 0;
+        width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .top100 h3{
+        font-size: 20px;
+    }
+    .top100 .etcBtn{
+        padding-right: 0;
+    }
+
+    .topSongScr{
+        width: 100%;
+        overflow-x: unset;
+        padding-bottom: 0;
+    }
+    .topSong{
+        
+        display: block;
+    }
+    .topSong:last-child{
+        padding-right: 0;
+    }
+    .topSongBox{
+        margin-top: 0;
+
+    }
+
+    .topSongBox .song{
+        width: 560px;
+        height: 65px;
+        background-color: transparent;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        box-sizing: border-box;
+        margin: 0 10px;
+        position: relative;
+        transition: all 0.5s;
+    }
+    .topSongBox .song:before{
+        content: '';
+        display: block;
+        width: 560px;
+        height: 1px;
+        background-image: 
+        linear-gradient(to right, transparent 5%, #ccc 50%, transparent 100%);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .topSongBox .song .songImg{
+        width: 50px;
+        height: 50px;
+        transition: all 0.4s;
+    }
+    .topSongBox .song .songImg img{
+        width: 50px;
+    }
+    .topSongBox .song .pBox{
+        display: flex;
+        margin-left: 30px;
+        width: 450px;
+        position: relative;
+    }
+    .topSongBox .song .title{
+        font-size: 20px;
+        width: 330px; 
+    }
+    .topSongBox .song .artist{
+        font-size: 18px;
+        text-align: right;
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .topSongBox .song button{
+        display: none;
+    }
+    .topSongBox .song button img{
+        width: 40px;
+    }
+
+    .topSongBox .song:hover{
+        height: 100px;
+    }
+    .topSongBox .song:hover .songImg{
+        width: 75px;
+        height: 75px;
+    }
+    .topSongBox .song:hover .songImg img{
+        width: 75px;
+    }
+    .topSongBox .song:hover .pBox{
+        display: block;
+    }
+    .topSongBox .song:hover .title{
+        font-size: 24px;
+    }
+    .topSongBox .song:hover .artist{
+        text-align: left;
+    }
+    .topSongBox .song:after{
+        background-image: url(../images/topPlayIcon2.png);
+        content: '';
+        display: none;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 12px;
+        left: 450px;
+        cursor: pointer;
+        
+    }
+    .topSongBox .song:hover:after{
+        display: block;
+        
+    }
+    .favCon{
+        margin-top: 50px;
+        width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .favFlex{
+        padding: 0;
+    }
+    .favPBox{
+        font-size: 20px;
+    }
+    .favFlex button{
+        cursor: pointer;
+    }
+
+    .favBoxCon{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .favBoxCon .favBox{
+        box-sizing: border-box;
+    }
+
+    .favBox:hover .favTitle{
+        color: #00cd3c;
+    }
+    .favBox:hover .favsubT{
+        color: #ddd;
+    }
+    .favBox div{
+        width: 240px;
+        height: 240px;
+        max-width: 240px;
+        max-height: 240px;
+    }
+    .favBox div img{
+        height: 240px;
+    }
+    
+    
+    .favBox .favTitle{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .favBox .favsubT{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .bnCon{
+        margin-top: 50px;
+    }
+    .bnCon .bnMo{
+        display: none;
+    }
+
+    .bnP{
+        display: block;
+    }
+    .bnPc{
+        background-image: url(../images/MileyCyrus.jpg);
+        width: 100%;
+        height: 224px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        
+    }
+
+
+
+    footer{
+        margin-top: 50px;
+    }
+    
+    .fWrap1{
+        font-size: 18px;
+        padding-bottom: 50px;
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        border-bottom: 1px solid #4e4e4e;
+    }
+    .fWrap1 .fMenu{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+    }
+    .fWrap1 .fMenu li{
+        margin: 0 30px;
+    }
+
+    .fWrap1 .fMenu li:hover{
+        color: #00cd3c;
+    }
+
+
+    .fWrap2{
+        margin-top: 30px;
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .fWrap2 .fMenu2{
+        font-size: 16px;
+        padding: 0;
+        justify-content: space-between;
+    }
+    .fWrap2 .fMenu2 li{
+        margin-bottom: 30px;
+        margin: 0;
+    }
+    .fWrap2 .fMenu2 li:hover{
+        color: #00cd3c;
+    }
+    
+    .fLogo{
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .fLogo a img{
+        width: 130px;
+    }
+    
+    address{
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    .copyright{
+        font-size: 14px;
+        margin-top: 25px;
+        padding-bottom: 120px;
+    }
+}

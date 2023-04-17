@@ -214,7 +214,10 @@ nav a.active span{
       margin-top: 300px;
     }
     .opImg{
-      transform: translate(150px, -85px);
+      
+      position: relative;
+      left: 130px;
+      bottom: 100px;
     }
 
     .infoBox{
@@ -571,6 +574,110 @@ nav a.active span{
       left: 420px;
     }
 
-    .gallWrap{
+
+
+    .design4{
       height: 100vh;
+      background-color: #f8f8f8;
+      position: relative;
+    }
+    .design4:before{
+      content: '';
+      width: calc((100% - 1200px) / 2 + 220px);
+      height: 1px;
+      background-color:#444;
+      position: absolute;
+      left: 0;
+      top: 232px;
+    }
+    .deCon4{
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+    }
+    .deCon4 .explain{
+      width: 600px;
+      color: #444;
+    }
+    .deCon4 h4{
+      margin-top: 55px;
+      font-size: 40px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: lighter;
+      margin-left: 80px;
+    }
+
+    .deCon4 .explain h5{
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: lighter;
+    }
+
+    .deCon4 .abBox{
+      margin-top: 60px;
+    }
+    .deCon4 .abtxt{
+      margin-top: 30px;
+      font-size: 15px;
+      font-family: 'NanumSquare';
+    }
+
+    .deCon4 .upBox{
+      margin-top: 60px;
+    }
+    .deCon4 .upBox h5{
+      margin-bottom: 30px;
+    }
+    .deCon4 .upBox span{
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      margin-right: 40px;
+    }
+
+    .deCon4 .colorBox{
+      margin-top: 60px;
+    }
+    .deCon4 .colorBox h5{
+      margin-bottom: 30px;
+    }
+
+    .deCon4 .colorBox .colorC{
+      display: flex;
+    }
+    .deCon4 .colorBox span{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .deCon4 .colorBox .c1{
+      background-color: #191919;
+    }
+    .deCon4 .colorBox .c2{
+      background-color: #20252a;
+    }
+    .deCon4 .colorBox .c3{
+      background-color: #888;
+    }
+    .deCon4 .colorBox .c4{
+      background-color: #00cd3c;
+    }
+    
+
+    .deCon4 .mockup{
+      margin-top: 155px;
+      position: relative;
+    }
+
+    .deCon4 .mockup .pcMock{
+      width: 600px;
+    }
+
+    .deCon4 .phone{
+      width: 220px;
+      position: absolute;
+      top: 180px;
+      left: 420px;
     }

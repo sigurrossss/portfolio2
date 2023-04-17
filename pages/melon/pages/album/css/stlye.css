@@ -1,0 +1,413 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: inherit;}
+@font-face {
+    font-family: pretendard;
+    src: url(../../../font/PretendardVariable.woff2);
+}
+
+body{
+    background-color: #191919;
+    font-family: 'pretendard';
+}
+.bnImg{
+    background-image: url(../images/BG1_mo.jpg);
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.bnImg:after{
+    content: '';
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to bottom, transparent 60%, #191919 90%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+.albumTxt{
+    padding: 0 20px;
+}
+.albumTxt h1{
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+}
+.albumTxt .artist{
+    font-size: 15px;
+    color: #fff;
+}
+.albumTxt .date{
+    font-size: 12px;
+    color: #a6a6a6;
+    margin-bottom: 20px;
+}
+
+.albumTxt2 div{
+    display: flex;
+}
+
+
+.albumTxt div .list{
+    
+    color: #a6a6a6;
+    font-size: 13px;
+    width: 50px;
+}
+.albumTxt div .info{
+    
+    font-size: 13px;
+    color: #fff;
+}
+
+.introCon{
+    margin-top: 20px;
+}
+
+.introCon .intro{
+    color: #a6a6a6;
+    font-size: 13px;
+}
+.introCon .introTxt{
+    margin-top: 5px;
+    font-size: 13px;
+    color: #fff;
+    
+}
+
+
+
+
+.musicCon{
+    padding: 0 20px;
+    margin-top: 30px;
+  
+
+}
+
+.selBtn{
+    margin-bottom: 20px;
+}
+.selBtn button{
+    font-size: 12px;
+    color: #818181;
+    width: 60px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #818181;
+}
+.music{
+    display: flex;
+    position: relative;
+    padding: 10px 0;
+}
+
+.checkBox{
+    margin-top: 3px;
+}
+
+.checkBox input[type=checkbox]{
+    position: absolute;
+    visibility: hidden;
+  }
+
+input[type=checkbox]:checked ~ .check {
+    border: 1px solid #4e4e4e;
+    position: relative;
+  }
+  
+  input[type=checkbox]:checked ~ .check::before{
+    background: #8f8f8f;
+    width: 85%;
+    content: '';
+    height: 85%;
+    position: absolute;
+    border-radius: 50%;
+    top:5%;
+    left:5%;
+  }
+  
+  input[type=checkbox]:checked ~ label{
+    color: #4e4e4e;
+  }
+
+
+
+.checkBox .check{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #4e4e4e;
+    margin-right: 15px;
+    display: block;
+
+}
+.number{
+    color: #fff;
+    margin-right: 20px;
+    width: 10px;
+}
+.title{
+    color: #fff;
+}
+
+.btnBox{
+    margin-left: auto;
+}
+.btnBox button{
+    background-color: transparent;
+    border: 0;
+    
+}
+.btnBox button img{
+    width: 25px;
+}
+
+.btn_pc{
+    display: none;
+}
+
+
+
+.music:after{
+    content: '';
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-image: 
+    linear-gradient(to right, transparent 5%, #ccc 50%, transparent 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+.playBtn{
+    margin-top: 30px;
+    margin-left: auto;
+}
+.playBtn button{
+    font-size: 12px;
+    color: #818181;
+    width: 60px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #818181;
+}
+
+@media all and (min-width:768px){
+
+    .bnImg{
+        background-image: url(../images/BG1.jpg);
+        height: 500px;
+    }
+    
+    .albumTxt.white h1{
+        color:#fff;
+    }
+    .albumTxt.black h1{
+        color:#000;
+    }
+
+    .albumTxt.white .artist{
+        color:#fff;
+    }
+    .albumTxt.black .artist{
+        color: #000;
+    }
+
+    .albumTxt.white div .info{
+        color:#fff;
+    }
+    .albumTxt.black div .info{
+        color: #000;
+    }
+
+    .albumTxt.white .introTxt{
+        color:#fff;
+    }
+    .albumTxt.black .introTxt{
+        color: #000;
+    }
+
+    
+    .albumTxt{
+        padding: 0;
+        position: absolute;
+        top: 100px;
+        left: 350px;
+    }
+    .albumTxt h1{
+        font-size: 24px;
+        font-weight: 500;
+        
+    }
+    .albumTxt .artist{
+        font-size: 18px;
+    }
+    .albumTxt .date{
+        font-size: 15px;
+    }
+    
+    .albumTxt div .list{
+        color: #a6a6a6;
+        font-size: 14px;
+    }
+    .albumTxt div .info{
+        font-size: 14px;
+        
+    }
+    
+    .introCon{
+        margin-top: 20px;
+    }
+    
+    .introCon .intro{
+        color: #a6a6a6;
+        font-size: 14px;
+    }
+    .introCon .introTxt{
+        margin-top: 5px;
+        font-size: 14px;
+        color: #000;
+        padding-right: 30px;
+    }
+    
+    
+    
+    
+    .musicCon{
+        padding: 0 30px;
+        margin-top: 40px;
+      
+    
+    }
+
+    .music{
+        align-items: center;
+    }
+    
+    .selBtn{
+        margin-bottom: 30px;
+    }
+    .selBtn button{
+        font-size: 14px;
+        width: 70px;
+        height: 25px;
+    }
+    
+    .checkBox{
+        margin-top: 4px;
+    }
+      
+      input[type=checkbox]:checked ~ .check::before{
+        top:7%;
+        left:7%;
+    }
+      
+    .number{
+        margin-right: 30px;
+    }
+    .title{
+    }
+
+
+    .btnBox button img{
+        width: 30px;
+    }
+    
+    
+    .playBtn{
+        margin-top: 40px;
+    }
+    .playBtn button{
+        font-size: 14px;
+        width: 70px;
+        height: 25px;
+    }
+    
+}
+
+@media all and (min-width:1024px){
+
+    .bnImg{
+        height: 650px;
+    }
+    
+    
+    .albumTxt{
+        top: 120px;
+        left: 50%;
+    }
+
+    .introCon{
+        margin-top: 30px;
+    }
+
+    .introCon .introTxt{
+        max-width: 800px;
+    }
+    
+    
+    .musicCon{
+        width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .title:hover{
+        color: #00cd3c;
+    }
+
+
+    .selBtn button{
+        cursor: pointer;
+    }
+
+    .selBtn button:hover{
+        color:#fff;
+        background-color: #818181;
+        border: 0;
+    }
+
+    .btnBox button{
+        cursor: pointer;
+    }
+    .btnBox button img{
+        width: 30px;
+    }
+
+    .btn_pc{
+        display: block;
+    }
+    .btnM{
+        display: none;
+    }
+    
+    
+    .playBtn{
+        margin-top: 40px;
+        padding-bottom: 50px;
+    }
+    .playBtn button{
+        cursor: pointer;
+    }
+
+    .playBtn button:hover{
+        color:#fff;
+        background-color: #818181;
+        border: 0;
+    }
+
+
+}
